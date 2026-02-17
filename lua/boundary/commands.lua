@@ -43,7 +43,9 @@ end
 
 function M.analyze(format)
   local root = get_root()
-  if not root then return end
+  if not root then
+    return
+  end
 
   format = format or "text"
   run_cmd({ "analyze", root, "--format", format }, {
@@ -57,7 +59,9 @@ end
 
 function M.score()
   local root = get_root()
-  if not root then return end
+  if not root then
+    return
+  end
 
   run_cmd({ "analyze", root, "--format", "json", "--compact" }, {
     on_success = function(result)
@@ -105,7 +109,9 @@ end
 
 function M.diagram(diagram_type)
   local root = get_root()
-  if not root then return end
+  if not root then
+    return
+  end
 
   diagram_type = diagram_type or "layers"
   run_cmd({ "diagram", root, "--diagram-type", diagram_type }, {
@@ -118,7 +124,9 @@ end
 
 function M.check()
   local root = get_root()
-  if not root then return end
+  if not root then
+    return
+  end
 
   run_cmd({ "check", root, "--format", "text" }, {
     allow_nonzero = true,

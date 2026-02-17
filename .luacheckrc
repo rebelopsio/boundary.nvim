@@ -1,6 +1,6 @@
 std = "luajit"
 
-read_globals = {
+globals = {
   "vim",
 }
 
