@@ -41,7 +41,7 @@ end
 
 local group = vim.api.nvim_create_augroup("BoundaryStatusline", { clear = true })
 
-vim.api.nvim_create_autocmd("LspNotification", {
+vim.api.nvim_create_autocmd("LspProgress", {
   group = group,
   callback = function(args)
     if args.data and args.data.client_id then
