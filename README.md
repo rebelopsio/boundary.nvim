@@ -12,7 +12,7 @@ Requires **Neovim 0.11+** (uses native `vim.lsp.config`/`vim.lsp.enable`).
 
 ```lua
 {
-  "smorgan/boundary.nvim",
+  "rebelopsio/boundary.nvim",
   opts = {},
 }
 ```
